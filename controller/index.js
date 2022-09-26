@@ -54,4 +54,7 @@ export {
   deletedetail,
   getdetailbyadmin,
   getuserdetail,
+  getdatebydetail,
+  getdatetodate,
+  avragedata,
 } from "./userdetail/userdetail.js";

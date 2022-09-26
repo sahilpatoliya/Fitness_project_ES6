@@ -126,6 +126,7 @@ export const verification = async (req, res) => {
     if (req.user.status == 1) {
       res.status(400).json({
         messages: "user is already verifyed",
+        userStatus: 1,
       });
     }
     //if not verified so Give Verification

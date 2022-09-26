@@ -1,16 +1,14 @@
 import Sequelize from "sequelize";
 //const minute = 1000 * 60;
-const a = new Date();
+const newDate = new Date();
 
-let createtime = a.getDate() + "-" + a.getMonth() + "-" + a.getFullYear();
-console.log(createtime);
 //this userdetail model
 
 export default (sequelize) => {
   return sequelize.define("userdetail", {
     date: {
-      type: Sequelize.STRING,
-      defaultValue: createtime,
+      type: Sequelize.DATE,
+      defaultValue: newDate,
     },
     userid: {
       type: Sequelize.INTEGER,

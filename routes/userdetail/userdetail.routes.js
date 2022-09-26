@@ -14,6 +14,9 @@ import {
   deletedetail,
   getdetailbyadmin,
   getuserdetail,
+  getdatebydetail,
+  getdatetodate,
+  avragedata,
 } from "../../controller/userdetail/userdetail.js";
 
 //this is router for api call
@@ -60,6 +63,25 @@ router.get(
   "/:userid/:id",
   expressjwt({ secret: "sahil@33333", algorithms: ["HS256"] }),
   getuserdetail
+);
+
+//getUserDetailBy link
+router.get(
+  "/date/:userid/:id",
+  expressjwt({ secret: "sahil@33333", algorithms: ["HS256"] }),
+  getdatebydetail
+);
+
+router.get(
+  "/datetodate/:userid/:id",
+  expressjwt({ secret: "sahil@33333", algorithms: ["HS256"] }),
+  getdatetodate
+);
+
+router.get(
+  "/avgdata/:userid/:id",
+  expressjwt({ secret: "sahil@33333", algorithms: ["HS256"] }),
+  avragedata
 );
 
 export default router;
